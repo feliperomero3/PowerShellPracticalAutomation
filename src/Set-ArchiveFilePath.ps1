@@ -49,19 +49,20 @@ function Set-ArchiveFilePath {
         [datetime]
         $Date
     )
+    process {
+        if (-not(Test-Path -Path $ZipPath)) {
+            New-Item -Path $ZipPath -ItemType Directory | Out-Null
+            Write-Verbose -Message "Created folder '$ZipPath'."
+        }
 
-    if (-not(Test-Path -Path $ZipPath)) {
-        New-Item -Path $ZipPath -ItemType Directory | Out-Null
-        Write-Verbose -Message "Created folder '$ZipPath'."
+        $timeString = $Date.ToString('yyyyMMdd')
+        $zipName = "$($ZipPrefix)$($timeString).zip"
+        $zipFile = Join-Path -Path $ZipPath -ChildPath $zipName
+
+        if (Test-Path -Path $zipFile) {
+            throw "The file '$zipFile' already exists."
+        }
+
+        $zipFile        
     }
-
-    $timeString = $Date.ToString('yyyyMMdd')
-    $zipName = "$($ZipPrefix)$($timeString).zip"
-    $zipFile = Join-Path -Path $ZipPath -ChildPath $zipName
-
-    if (Test-Path -Path $zipFile) {
-        throw "The file '$zipFile' already exists."
-    }
-
-    $zipFile
 }
