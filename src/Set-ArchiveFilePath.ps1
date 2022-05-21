@@ -21,6 +21,16 @@ function Set-ArchiveFilePath {
         The prefix for the archive.
     .PARAMETER Date
         The date value to use for creating the timestamp.
+    .EXAMPLE
+        Set-ArchiveFilePath -ZipPath "$Env:TEMP\Archives" -ZipPrefix 'LogArchive-' -Date '2022-05-20' -Verbose
+        VERBOSE: Created folder 'C:\Users\username\AppData\Local\Temp\Archives'.
+        C:\Users\username\AppData\Local\Temp\Archives\LogArchive-20220520.zip
+    .EXAMPLE
+        Set-ArchiveFilePath -ZipPath "$Env:TEMP\Archives" -ZipPrefix 'LogArchive-' -Date '2022-05-20' -Verbose
+        C:\Users\username\AppData\Local\Temp\Archives\LogArchive-20220520.zip
+    .EXAMPLE
+        Set-ArchiveFilePath -ZipPath "$Env:TEMP\Archives" -ZipPrefix 'LogArchive-' -Date '2022-05-20' -Verbose
+        The file 'C:\Users\username\AppData\Local\Temp\Archives\LogArchive-20220520.zip' already exists.
     .OUTPUTS
         The archive file path.
     #>
