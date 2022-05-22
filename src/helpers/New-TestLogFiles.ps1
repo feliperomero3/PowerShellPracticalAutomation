@@ -42,7 +42,7 @@ function Set-RandomSizeFile {
 
 for ($i = 0; $i -lt $pastDays; $i++) {
     $date = (Get-Date).AddDays(-$i)
-    $fileName = "u_ex$(date.ToString('yyyyMMdd')).log"
+    $fileName = "u_ex$($date.ToString('yyyyMMdd')).log"
     $filePath = Join-Path -Path $logsDirectory -ChildPath $fileName
     $date | Out-File -FilePath $filePath
     Set-RandomSizeFile -FilePath $filePath
