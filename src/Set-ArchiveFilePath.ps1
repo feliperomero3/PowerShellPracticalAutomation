@@ -25,12 +25,20 @@ function Set-ArchiveFilePath {
         Set-ArchiveFilePath -ZipPath "$Env:TEMP\Archives" -ZipPrefix 'LogArchive-' -Date '2022-05-20' -Verbose
         VERBOSE: Created folder 'C:\Users\username\AppData\Local\Temp\Archives'.
         C:\Users\username\AppData\Local\Temp\Archives\LogArchive-20220520.zip
+
+        The function creates the file path.
     .EXAMPLE
         Set-ArchiveFilePath -ZipPath "$Env:TEMP\Archives" -ZipPrefix 'LogArchive-' -Date '2022-05-20' -Verbose
         C:\Users\username\AppData\Local\Temp\Archives\LogArchive-20220520.zip
+
+        In this example the directory (the value provided to the ZipPath parameter) already exists,
+        the function will not attempt to create the directory and only creates the the file path.
     .EXAMPLE
         Set-ArchiveFilePath -ZipPath "$Env:TEMP\Archives" -ZipPrefix 'LogArchive-' -Date '2022-05-20' -Verbose
         The file 'C:\Users\username\AppData\Local\Temp\Archives\LogArchive-20220520.zip' already exists.
+
+        In this example the file path already exists, the function throws an exception with a message stating
+        that the file already exists.
     .OUTPUTS
         The archive file path.
     #>
