@@ -18,6 +18,12 @@ function Set-RandomFileSize {
 
     .EXAMPLE
     Set-RandomFileSize -FilePath "$Env:TEMP\log_20220520.log"
+
+        Directory: C:\Users\username\AppData\Local\Temp
+
+    Mode                 LastWriteTime         Length Name
+    ----                 -------------         ------ ----
+    -a---          21/05/2022    22:45       48234496 log_20220520.log
     #>
     [CmdletBinding()]
     [OutputType([System.Object])]
