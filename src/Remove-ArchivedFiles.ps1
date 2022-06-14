@@ -1,16 +1,17 @@
 function Remove-ArchivedFiles {
     <#
     .SYNOPSIS
-    Remove archive files.
+    Delete archived files.
     
     .DESCRIPTION
-    Removes files that have a match in specified archive.
+    Delete files that have a match in a specified archive.
     
     .EXAMPLE
-    An example
+    Remove-ArchivedFiles -ZipFile "$Env:TEMP\Logs\u_ex20220316.zip" -FilesToDelete (Get-ChildItem -Path "$Env:TEMP\Logs\u_ex20220316.log") 
     
-    .NOTES
-    General notes
+    .EXAMPLE
+    Remove-ArchivedFiles -ZipFile "$Env:TEMP\Logs\u_ex20220316.zip" -FilesToDelete (Get-ChildItem -Path "$Env:TEMP\Logs\u_ex20220316.log") -WhatIf
+    What if: Performing the operation "Remove File" on target "C:\Users\username\AppData\Local\Temp\Logs\u_ex20220316.log".
     #>
     [CmdletBinding()]
     [OutputType()]
