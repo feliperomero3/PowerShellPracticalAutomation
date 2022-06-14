@@ -40,7 +40,7 @@ function Remove-ArchivedFiles {
             $archivedFile = $zipFileEntries | Where-Object { $_.Name -eq $file.Name -and $_.Length -eq $file.Length }
 
             if ($null -ne $archivedFile) {
-                $file = Remove-Item -Force -WhatIf:$WhatIf
+                $file | Remove-Item -Force -WhatIf:$WhatIf
             }
             else {
                 Write-Error -Message "'$($file.Name)' was not found in '$($ZipFile)'."
