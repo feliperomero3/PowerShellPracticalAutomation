@@ -1,5 +1,5 @@
 $logsDirectory = Join-Path -Path "$Env:TEMP" -ChildPath 'Logs'
-$pastDays = 90
+$pastDays = 30
 
 if (-not(Test-Path -Path $logsDirectory)) {
     New-Item -Path $logsDirectory -ItemType Directory

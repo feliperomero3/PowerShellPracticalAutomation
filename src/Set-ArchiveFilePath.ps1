@@ -1,13 +1,3 @@
-<#
-.SYNOPSIS
-    A simple script to clean up old log files.
-.DESCRIPTION
-    Finds the files to archive, adds the old files to an archive file, then removes the old files.
-.NOTES
-    Work in progress.
-#>
-
-
 function Set-ArchiveFilePath {
     <#
     .SYNOPSIS
