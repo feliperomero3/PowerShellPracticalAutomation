@@ -5,7 +5,7 @@ This repository contains all of the code created by coding-along with the book
 
 ## Prerequisites
 
-- Powershell 7.2.x
+- Powershell 7.3.x
 
 ## License
 
