@@ -1,3 +1,5 @@
+#Requires -Modules FileCleanupTools
+
 <#
 .SYNOPSIS
     A simple script to clean up old log files.
