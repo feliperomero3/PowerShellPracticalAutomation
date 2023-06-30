@@ -11,6 +11,6 @@ This repository contains all of the code created by coding-along with the book
 
 [MIT License](./LICENSE)
 
-Copyright &copy; 2022 Felipe Romero
+Copyright &copy; 2023 Felipe Romero
 
 [L1]: <https://www.manning.com/books/practical-automation-with-powershell>
