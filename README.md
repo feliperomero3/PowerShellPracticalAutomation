@@ -1,11 +1,11 @@
 # Practical Automation with PowerShell
 
 This repository contains all of the code created by coding-along with the book
-[Practical Automation with PowerShell][L1] by Matthew Dowst (Manning, MEAP v9).
+[Practical Automation with PowerShell][L1] by Matthew Dowst (Manning, 2023).
 
 ## Prerequisites
 
-- Powershell 7.3.x
+- PowerShell 7.3.x
 
 ## License
 
